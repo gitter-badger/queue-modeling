@@ -9,8 +9,8 @@ import "fmt"
 //Stat is a struct that have the two input values
 //used in the calc operations
 type Stat struct {
-	lambda float64
-	mu     float64
+	Lambda float64
+	Mu     float64
 }
 
 ///////////////////////////////////////////////////
@@ -21,7 +21,7 @@ type Stat struct {
 //to mantein the incoming of messages to que queue
 //Queue M/M/1
 func (stat Stat) TrafficIntensity() (result string) {
-	rho := stat.lambda / stat.mu
+	rho := stat.Lambda / stat.Mu
 	result = fmt.Sprintf("ρ = λ / μ = %5.2f", rho)
 	return result
 }
