@@ -15,10 +15,11 @@ var l, m *float64
 func init() {
 	l = flag.Float64("l", 0.0, "lambda")
 	m = flag.Float64("m", 0.0, "Mu")
-	flag.Parse()
+	
 }
 
 func main() {
+        flag.Parse()
 	stats := statistic{*l, *m}
 
 	fmt.Printf("%s", stats.trafficIntensity())
