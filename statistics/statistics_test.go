@@ -2,9 +2,11 @@ package statistics
 
 import "testing"
 
+/**
 func TestFail(t *testing.T) {
         t.Error("Test Shippable Error")
 }
+*/
 
 func TestTrafficIntensityOK(t *testing.T) {
 	stat := Stat{Lambda: 10, Mu: 10}
