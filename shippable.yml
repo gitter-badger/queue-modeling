@@ -2,8 +2,11 @@
 language: go
   # version numbers
 go:
-  - 1.3
+ - 1.3
 install:
-  go get github.com/codegangsta/cli
+ - go get github.com/codegangsta/cli
+  
+before_script: 
+ - mkdir -p shippable/testresults
 script:
-  go test -v ./... 
+ - go test -v ./... 
