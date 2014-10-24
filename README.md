@@ -10,5 +10,6 @@ and outputs the formula and answer
 example
 =======
 
-./queue-modeling -lambda 10 -mu 15
+./queue-modeling -lambda 10 -mu 15 
+
 ρ = λ / μ = 0.67
