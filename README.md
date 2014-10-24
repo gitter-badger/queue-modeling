@@ -1,7 +1,7 @@
 Queue-Modeling - WIP
 ==============
 
-Is a command-line tool that automate the task of having to calculate
+Is a command-line tool to automate the task of having to calculate
 queue theory formulas
 
 receives as input  λ and μ
