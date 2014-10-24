@@ -1,0 +1,10 @@
+ # language setting
+language: go
+  # version numbers
+go:
+  - 1.3
+install:
+  go get github.com/codegangsta/cli
+script:
+  cd statistics
+  go test 
