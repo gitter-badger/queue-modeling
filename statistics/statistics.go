@@ -3,7 +3,7 @@ package statistics
 import "errors"
 
 ///////////////////////////////////////////////////
-//                Struct                        //
+//                 Struct                        //
 ///////////////////////////////////////////////////
 
 //Stat is a struct that have the two input values
