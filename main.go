@@ -5,12 +5,27 @@ import (
 	"fmt"
 )
 
-func main() {
-	var lambda = flag.Float64("l", 0.0, "lambda")
-	var mu = flag.Float64("m", 0.0, "Mu")
+type statistic struct {
+	lambda float64
+	mu     float64
+}
+
+var l, m *float64
+
+func init() {
+	l = flag.Float64("l", 0.0, "lambda")
+	m = flag.Float64("m", 0.0, "Mu")
 	flag.Parse()
+}
 
-	rho := *lambda / *mu
+func main() {
+	stats := statistic{*l, *m}
 
-	fmt.Printf("ρ = λ / μ  => ρ = %.2f / %.2f => ρ = %.4f\n", *lambda, *mu, rho)
+	fmt.Printf("%s", stats.trafficIntensity())
+}
+
+func (stats statistic) trafficIntensity() (result string) {
+	rho := stats.lambda / stats.mu
+	fmt.Sprintf(result, "ρ = λ / μ = %5.2f", rho)
+	return
 }
