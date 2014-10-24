@@ -14,7 +14,7 @@ type Stat struct {
 }
 
 ///////////////////////////////////////////////////
-//               Calculation functions           //
+//       Performance Measurement Formulas        //
 ///////////////////////////////////////////////////
 
 //TrafficIntensity calculate the minimum amount of servers
