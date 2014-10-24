@@ -18,5 +18,5 @@ Todo
 ==========
 - [ ] Add all formulas from M/M/1 Queue type
 - [ ] Output to file
-- [ ] Add formulas from other kind of queue types
+- [ ] Add formulas from other kinds of queue types
 - [ ] Add filter to output only a few formulas
