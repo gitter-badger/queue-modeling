@@ -10,16 +10,9 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/raphaeljlps/queue-modeling/statistics"
 	"github.com/codegangsta/cli"
 )
-
-///////////////////////////////////////////////////
-//                Structs                        //
-///////////////////////////////////////////////////
-type statistic struct {
-	lambda float64
-	mu     float64
-}
 
 ///////////////////////////////////////////////////
 //                Main function                  //
@@ -49,21 +42,10 @@ func main() {
 		l := c.Float64("lambda")
 		m := c.Float64("mu")
 
-		stats := statistic{lambda: l, mu: m}
+		stats := statistics.Stat{Lambda: l, Mu: m}
 
-		fmt.Printf("%s", stats.trafficIntensity())
+		fmt.Printf("%s", stats.TrafficIntensity())
 
 	}
 	app.Run(os.Args)
 }
-
-///////////////////////////////////////////////////
-//               Calculation functions           //
-///////////////////////////////////////////////////
-
-func (stats statistic) trafficIntensity() (result string) {
-	rho := stats.lambda / stats.mu
-	result = fmt.Sprintf("ρ = λ / μ = %5.2f", rho)
-	return result
-}
-
