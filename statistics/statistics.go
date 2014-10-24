@@ -18,7 +18,7 @@ type Stat struct {
 ///////////////////////////////////////////////////
 
 //TrafficIntensity calculate the minimum amount of servers
-//to mantein the incoming of messages to que queue
+//needed to maintain the incoming of jobs to que queue
 //Queue M/M/1
 func (stat Stat) TrafficIntensity() (result float64, err error) {
 	if stat.Mu == 0 {
