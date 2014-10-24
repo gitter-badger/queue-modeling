@@ -1,4 +1,4 @@
-Queue-Modeling - WIP
+Queue-Modeling - WIP     [![Build Status](https://api.shippable.com/projects/544a95ba44927f89db3dc308/badge?branchName=master)](https://app.shippable.com/projects/544a95ba44927f89db3dc308/builds/latest)
 ==============
 
 Is a command-line tool to automate the task of having to calculate
