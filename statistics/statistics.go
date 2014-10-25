@@ -22,11 +22,22 @@ type Stat struct {
 //Queue type M/M/1
 func (stat Stat) TrafficIntensity() (result float64, err error) {
 	if stat.Mu == 0 {
-		return 0.0, errors.New("Can't divide by zero")
+		return 0, errors.New("Can't divide by zero")
 	}
 
 	rho := stat.Lambda / stat.Mu
 	result = rho
-	//result = fmt.Sprintf("ρ = λ / μ = %5.2f", rho)
+	return result, nil
+}
+
+func (stat Stat) zeroJobsInSystem() (result float64, err error) {
+	p, er := stat.TrafficIntensity()
+	if err != nil {
+		return 0, er
+	}
+
+	p0 := 1 - p
+	result = p0
+
 	return result, nil
 }
