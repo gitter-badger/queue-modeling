@@ -8,11 +8,11 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"log"
-	
-	"github.com/raphaeljlps/queue-modeling/statistics"
+	"os"
+
 	"github.com/codegangsta/cli"
+	"github.com/raphaeljlps/queue-modeling/statistics"
 )
 
 ///////////////////////////////////////////////////
@@ -46,10 +46,10 @@ func main() {
 		stats := statistics.Stat{Lambda: l, Mu: m}
 		result, err := stats.TrafficIntensity()
 		if err != nil {
-		    log.Fatal(err)
-		    os.Exit(1)
+			log.Fatal(err)
+			os.Exit(1)
 		}
-		
+
 		fmt.Printf("ρ = λ / μ = %5.2f", result)
 
 	}
