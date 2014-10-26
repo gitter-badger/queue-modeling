@@ -2,11 +2,9 @@ package statistics
 
 import "testing"
 
-/**
-func TestFail(t *testing.T) {
-        t.Error("Test Shippable Error")
-}
-*/
+///////////////////////////////////////////////////
+//           Traffic Intensity Tests             //
+///////////////////////////////////////////////////
 
 func TestTrafficIntensityOK(t *testing.T) {
 	stat := Stat{Lambda: 10, Mu: 10}
@@ -31,14 +29,22 @@ func TestTrafficIntensityOK(t *testing.T) {
 	}
 }
 
-func TestTrafficIntensityError(t *testing.T)  {
-  stat := Stat{Lambda: 10, Mu: 0}
+func TestTrafficIntensityError(t *testing.T) {
+	stat := Stat{Lambda: 10, Mu: 0}
 
-  _, err := stat.TrafficIntensity()
+	_, err := stat.TrafficIntensity()
 
-  if err == nil {
-    t.Error("For {Lambda: ", stat.Lambda, " Mu: ", stat.Mu, "} ",
-      "Expected error not nil",
-            "Got error nil")
-  }
+	if err == nil {
+		t.Error("For {Lambda: ", stat.Lambda, " Mu: ", stat.Mu, "} ",
+			"Expected error not nil",
+			"Got error nil")
+	}
+}
+
+///////////////////////////////////////////////////
+//            Zero Jobs In System Tests          //
+///////////////////////////////////////////////////
+
+func TestZeroJobsInSystemOK(t *testing.T) {
+	t.Error("Error")
 }
