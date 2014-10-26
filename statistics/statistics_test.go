@@ -61,3 +61,15 @@ func TestZeroJobsInSystemOK(t *testing.T) {
 		t.Error(errorOutput(stat.Lambda, stat.Mu, correctValue, result))
 	}
 }
+
+func TestZeroJobsInSystemError(t *testing.T) {
+	stat := Stat{Lambda: 10, Mu: 0}
+
+	_, err := stat.ZeroJobsInSystem()
+
+	if err == nil {
+		t.Error("For {Lambda: ", stat.Lambda, " Mu: ", stat.Mu, "} ",
+			"Expected error not nil",
+			"Got error nil")
+	}
+}
