@@ -52,7 +52,7 @@ func main() {
 
 		fmt.Printf("ρ = λ / μ = %.4f", result)
 		
-		result, err := stats.ZeroJobsInSystem()
+		result, err = stats.ZeroJobsInSystem()
 		if err != nil {
 			log.Fatal(err)
 		} else {
