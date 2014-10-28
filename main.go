@@ -55,6 +55,11 @@ func main() {
 		result, _ = stats.ZeroJobsInSystem()
 
 		fmt.Printf("p0 = 1 - p = %.4f\n", result)
+
+		result, _ = stats.MeanNumberJobsInSystem()
+
+		fmt.Printf("p / (1 - p) = %.4f\n", result)
 	}
+
 	app.Run(os.Args)
 }

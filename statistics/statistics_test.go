@@ -14,7 +14,7 @@ func errorOutput(lambda, mu, correctValue, result float64) (out string) {
 }
 
 ///////////////////////////////////////////////////
-//           Traffic Intensity Tests             //
+//           Traffic intensity tests             //
 ///////////////////////////////////////////////////
 
 func TestTrafficIntensityOK(t *testing.T) {
@@ -49,7 +49,7 @@ func TestTrafficIntensityError(t *testing.T) {
 }
 
 ///////////////////////////////////////////////////
-//            Zero Jobs In System Tests          //
+//            Zero jobs in system tests          //
 ///////////////////////////////////////////////////
 
 func TestZeroJobsInSystemOK(t *testing.T) {
@@ -72,4 +72,20 @@ func TestZeroJobsInSystemError(t *testing.T) {
 			"Expected error not nil",
 			"Got error nil")
 	}
+}
+
+///////////////////////////////////////////////////
+//      Mean number of jobs in system tests      //
+///////////////////////////////////////////////////
+
+func TestMeanNumberJobsInSystemOK(t *testing.T) {
+	stat := Stat{Lambda: 11, Mu: 1}
+
+	result, _ := stat.MeanNumberJobsInSystem()
+	correctValue := -1.1
+
+	if result != correctValue {
+		t.Error(errorOutput(stat.Lambda, stat.Mu, correctValue, result))
+	}
+	//TODO: ADD MORE TESTS
 }

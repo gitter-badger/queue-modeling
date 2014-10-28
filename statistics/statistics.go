@@ -43,3 +43,21 @@ func (stat Stat) ZeroJobsInSystem() (result float64, err error) {
 
 	return result, nil
 }
+
+//MeanNumberJobsInSystem is a function that calculate the mean number of jobs
+//in the system.
+func (stat Stat) MeanNumberJobsInSystem() (result float64, err error) {
+	p, er := stat.TrafficIntensity()
+	if er != nil {
+		return 0, er
+	}
+
+	pminus, e := stat.ZeroJobsInSystem()
+	if e != nil {
+		return 0, e
+	}
+
+	result = p / pminus
+
+	return result, nil
+}
