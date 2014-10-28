@@ -12,7 +12,9 @@ example
 
 ./queue-modeling -lambda 10 -mu 15 
 
-ρ = λ / μ = 0.67
+ρ  = λ / μ  = 0.6700
+p0 = 1 - p  = 0.3333
+p / (1 - p) = 2.0303
 
 Todo
 ==========
