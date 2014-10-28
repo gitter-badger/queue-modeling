@@ -31,6 +31,7 @@ func (stat Stat) TrafficIntensity() (result float64, err error) {
 }
 
 //ZeroJobsInSystem calculate the
+//TODO: add doc to this function
 func (stat Stat) ZeroJobsInSystem() (result float64, err error) {
 	p, er := stat.TrafficIntensity()
 	if er != nil {

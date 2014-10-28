@@ -50,14 +50,11 @@ func main() {
 			os.Exit(1)
 		}
 
-		fmt.Printf("ρ = λ / μ = %.4f", result)
-		
-		result, err = stats.ZeroJobsInSystem()
-		if err != nil {
-			log.Fatal(err)
-		} else {
-			fmt.Printf("p0 = 1 - p = %.4f", result)
-		}
+		fmt.Printf("ρ = λ / μ = %.4f\n", result)
+
+		result, _ = stats.ZeroJobsInSystem()
+
+		fmt.Printf("p0 = 1 - p = %.4f\n", result)
 	}
 	app.Run(os.Args)
 }
