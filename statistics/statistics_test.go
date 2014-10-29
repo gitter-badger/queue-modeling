@@ -9,9 +9,9 @@ import (
 //                                  Utility                                 //
 //////////////////////////////////////////////////////////////////////////////
 
-func errorOutput(method string, lambda, mu, correctValue, result float64) (out string) {
-	out = fmt.Sprintf("In Method: %s For {Lambda: %.4f Mu: %.4f} Expected %.4f Got %.4f",
-		method, lambda, mu, correctValue, result)
+func errorOutput(lambda, mu, correctValue, result float64) (out string) {
+	out = fmt.Sprintf("For {Lambda: %.4f Mu: %.4f} Expected %.4f Got %.4f",
+		lambda, mu, correctValue, result)
 	return out
 }
 
@@ -25,8 +25,7 @@ func TestTrafficIntensityOK(t *testing.T) {
 	result, _ := stat.TrafficIntensity()
 	correctValue := 1.0
 	if result != correctValue {
-		t.Error(errorOutput("TestTrafficIntensityOK",
-			stat.Lambda, stat.Mu, correctValue, result))
+		t.Error(errorOutput(stat.Lambda, stat.Mu, correctValue, result))
 	}
 
 	stat.Lambda = 20
@@ -35,8 +34,7 @@ func TestTrafficIntensityOK(t *testing.T) {
 	correctValue = 2.0
 
 	if result != correctValue {
-		t.Error(errorOutput("TestTrafficIntensityOK",
-			stat.Lambda, stat.Mu, correctValue, result))
+		t.Error(errorOutput(stat.Lambda, stat.Mu, correctValue, result))
 	}
 }
 
@@ -46,7 +44,7 @@ func TestTrafficIntensityError(t *testing.T) {
 	_, err := stat.TrafficIntensity()
 
 	if err == nil {
-		t.Error("In Method TestTrafficIntensityError For {Lambda: ",
+		t.Error("For {Lambda: ",
 			stat.Lambda, " Mu: ", stat.Mu, "} ",
 			"Expected error not nil",
 			"Got error nil")
@@ -63,8 +61,7 @@ func TestZeroJobsInSystemOK(t *testing.T) {
 	result, _ := stat.ZeroJobsInSystem()
 	correctValue := -1.0
 	if result != correctValue {
-		t.Error(errorOutput("TestZeroJobsInSystemOK", stat.Lambda,
-			stat.Mu, correctValue, result))
+		t.Error(errorOutput(stat.Lambda, stat.Mu, correctValue, result))
 	}
 }
 
@@ -91,8 +88,7 @@ func TestMeanNumberJobsInSystemOK(t *testing.T) {
 	correctValue := -1.1
 
 	if result != correctValue {
-		t.Error(errorOutput("TestMeanNumberJobsInSystemOK",
-			stat.Lambda, stat.Mu, correctValue, result))
+		t.Error(errorOutput(stat.Lambda, stat.Mu, correctValue, result))
 	}
 	//TODO: ADD MORE TESTS
 }
@@ -108,7 +104,21 @@ func TestVarianceNumberJobsInSystemOK(t *testing.T) {
 	correctValue := 2.0
 
 	if result != correctValue {
-		t.Error(errorOutput("TestVarianceNumberJobsInSystemOK",
-			stat.Lambda, stat.Mu, correctValue, result))
+		t.Error(errorOutput(stat.Lambda, stat.Mu, correctValue, result))
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////
+//                   Mean number of jobs in the queue                       //
+//////////////////////////////////////////////////////////////////////////////
+
+func TestMeanNumberJobsInQueue(t *testing.T) {
+	stat := Stat{Lambda: 20, Mu: 10}
+
+	result, _ := stat.MeanNumberJobsInQueue()
+	correctValue := -4.0
+
+	if result != correctValue {
+		t.Error(errorOutput(stat.Lambda, stat.Mu, correctValue, result))
 	}
 }
