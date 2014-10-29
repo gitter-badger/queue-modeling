@@ -50,15 +50,19 @@ func main() {
 			os.Exit(1)
 		}
 
-		fmt.Printf("ρ = λ / μ = %.4f\n", result)
+		fmt.Printf("ρ     = λ / μ         = %.4f\n", result)
 
 		result, _ = stats.ZeroJobsInSystem()
 
-		fmt.Printf("p0 = 1 - p = %.4f\n", result)
+		fmt.Printf("p0    = 1 - p         = %.4f\n", result)
 
 		result, _ = stats.MeanNumberJobsInSystem()
 
-		fmt.Printf("p / (1 - p) = %.4f\n", result)
+		fmt.Printf("E[n]  = p / (1 - p)   = %.4f\n", result)
+
+		result, _ = stats.VarianceNumberJobsInSystem()
+
+		fmt.Printf("Var[n] = p / (1 - p)^2 = %.4f\n", result)
 	}
 
 	app.Run(os.Args)
