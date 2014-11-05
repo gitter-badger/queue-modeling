@@ -1,5 +1,5 @@
-[![Stories in Ready](https://badge.waffle.io/raphaeljlps/queue-modeling.png?label=ready&title=Ready)](https://waffle.io/raphaeljlps/queue-modeling)
-Queue-Modeling - WIP     [![Build Status](https://api.shippable.com/projects/544a95ba44927f89db3dc308/badge?branchName=master)](https://app.shippable.com/projects/544a95ba44927f89db3dc308/builds/latest)
+
+Queue-Modeling - WIP     [![Build Status](https://api.shippable.com/projects/544a95ba44927f89db3dc308/badge?branchName=master)](https://app.shippable.com/projects/544a95ba44927f89db3dc308/builds/latest)[![Build Status](https://travis-ci.org/raphaeljlps/queue-modeling.svg?branch=master)](https://travis-ci.org/raphaeljlps/queue-modeling)[![Stories in Ready](https://badge.waffle.io/raphaeljlps/queue-modeling.png?label=ready&title=Ready)](https://waffle.io/raphaeljlps/queue-modeling)
 ==============
 
 Is a command-line tool to automate the task of having to calculate
