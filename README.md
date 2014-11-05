@@ -1,5 +1,5 @@
 
-Queue-Modeling - WIP [![Build Status](https://travis-ci.org/raphaeljlps/queue-modeling.svg?branch=master)](https://travis-ci.org/raphaeljlps/queue-modeling)[![Stories in Ready](https://badge.waffle.io/raphaeljlps/queue-modeling.png?label=ready&title=Ready)](https://waffle.io/raphaeljlps/queue-modeling)
+Queue-Modeling - WIP [![Build Status](https://travis-ci.org/raphaeljlps/queue-modeling.svg?branch=master)](https://travis-ci.org/raphaeljlps/queue-modeling)[![Stories in Ready](https://badge.waffle.io/raphaeljlps/queue-modeling.png?label=bug&title=Bugs)](https://waffle.io/raphaeljlps/queue-modeling)
 ==============
 
 Is a command-line tool to automate the task of having to calculate
