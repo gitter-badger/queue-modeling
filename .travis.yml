@@ -5,6 +5,9 @@ go:
   
 install:  
   - go get github.com/codegangsta/cli
+  - go get code.google.com/p/go.tools/cmd/cover
+  - go get github.com/mattn/goveralls
   
 script:
-  - go test -v ./...
+ - go test -v -covermode=count -coverprofile=coverage.out
+ - $HOME/gopath/bin/goveralls -coverprofile=coverage.out -service=travis-ci -repotoken $COVERALLS_TOKEN
