@@ -38,7 +38,7 @@ func (stat Stat) TrafficIntensity() (result float64, err error) {
 func (stat Stat) ZeroJobsInSystem() (result float64, err error) {
 	p, er := stat.TrafficIntensity()
 	if er != nil {
-		return 0, er
+		return 0, err
 	}
 
 	p0 := 1 - p
