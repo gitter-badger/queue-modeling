@@ -19,7 +19,7 @@ p0 = 1 - p  = 0.3333
 
 p / (1 - p) = 2.0303
 
-
+![screenshot](screenshot.png)
 Todo
 ==========
 - [ ] Add all formulas from M/M/1 Queue type
