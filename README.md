@@ -1,6 +1,7 @@
 
 Queue-Modeling - WIP [![Build Status](https://travis-ci.org/raphaeljlps/queue-modeling.svg?branch=master)](https://travis-ci.org/raphaeljlps/queue-modeling)[![Stories in Ready](https://badge.waffle.io/raphaeljlps/queue-modeling.png?label=bug&title=bugs)](https://waffle.io/raphaeljlps/queue-modeling)
 ==============
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/raphaeljlps/queue-modeling?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Is a command-line tool to automate the task of having to calculate
 queue theory formulas
